@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="flex-column container center">
+    <h1 class="fit">Boggle</h1>
+    <h3 class="fit">Time: <span id="timer">60</span></h3>
+    <p id="score" class="fit">Score: </p>
+    <p id="feedback" class="fit"></p>
+    {% for row in context.board %}
+    <div class="row flex fit">
+        {% for val in row %}
+        <div class="fit">{{val}}</div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <form id="form" class="fit">
+        <label>Guess</label>
+        <input type="text" required name="guess" placeholder="Type here..."/>
+        <input type="submit" value="Submit">
+    </form>
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+</div>
+{% endblock %}

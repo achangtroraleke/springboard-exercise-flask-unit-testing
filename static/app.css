@@ -1,0 +1,27 @@
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container{
+    width: min(80%, 300px);
+}
+.center{
+    margin:auto;
+}
+
+.fit{
+    width: 100%;
+    text-align: center;
+}
+
+p{
+    margin:0;
+    padding: 0;
+}
